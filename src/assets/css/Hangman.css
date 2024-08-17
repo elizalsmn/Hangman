@@ -1,0 +1,163 @@
+.main-drawing {
+    position: relative;
+    height: 420px;
+    width : 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bar{
+    background-color: black;
+    position:absolute;
+}
+
+.bottom {
+    height: 8px;
+    width: 250px;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.vertical {
+    height: 400px;
+    width: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+}
+
+.upper {
+    top: 10px;
+    height: 8px;
+    width: 200px;
+    left: calc(50% - 4px); /* Offsets by half of the upper's width */
+}
+
+.smallup {
+    height: 50px;
+    width: 8px;
+    top: 10px;
+    left: calc(50% + 190px); /* Positions at the end of the upper horizontal pole */
+}
+
+.hangman-head{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 8px solid black;
+    position: absolute;
+    top: 60px;
+    right:-75px;
+}
+
+.hangman-body{
+    width: 8px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top: 126px;
+    right:-45px;
+}
+
+.hangman-r-arm{
+    width: 90px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    top: 156px;
+    right: -135px;
+    rotate: -30deg;
+    transform-origin: left bottom;
+}
+
+.hangman-l-arm{
+    width: 90px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    top: 156px;
+    right: -37px;
+    rotate: 30deg;
+    transform-origin: right bottom;
+}
+
+.hangman-r-leg{
+    width: 90px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    top: 220px;
+    right: -135px;
+    rotate: 60deg;
+    transform-origin: left top;
+}
+
+.hangman-l-leg{
+    width: 90px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    top: 220px;
+    right: -37px;
+    rotate: -60deg;
+    transform-origin: right top;
+}
+
+.word-guess{
+    display: flex;
+    gap: 0.25em;
+    font-size:6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.span-guess{
+    border-bottom: .1em solid black;
+}
+
+.hide-letter{
+    visibility: hidden;
+}
+
+.show-letter{
+    visibility: visible;
+}
+
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: .5rem;
+}
+
+.keyboard-btn{
+    width: 80%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1/1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.keyboard-btn.active{
+    background-color: pink;
+    color: darkred;
+}
+
+.keyboard-btn.inactive{
+    opacity: .3;
+}
+
+.keyboard-btn:not(.inactive):hover,
+.keyboard-btn:not(.inactive):focus {
+    background-color: pink;
+}
+
+
