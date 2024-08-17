@@ -6,7 +6,7 @@ Welcome to the Hangman Game! This is a classic word-guessing game built with Typ
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Installation](#installation)
+- [Starting](#starting)
 
 ## Features
 
@@ -20,7 +20,7 @@ Before you can start the game, ensure you have the following installed on your s
 - **Node.js** (version 14.x or higher)
 - **npm** (Node package manager)
 
-## Installation
+## Starting
 
 Follow these steps to set up the Hangman game on your local machine:
 
@@ -31,8 +31,7 @@ Follow these steps to set up the Hangman game on your local machine:
    cd Hangman
    ```
 2. copy the line in start.sh one by one, and you'll have your own container with the game in it. Or you can just copy these lines one by one in the hangman directory
-
-   ```bash
+    ```bash
    sudo docker run -it --rm -v "$(pwd)":/content -p 0.0.0.0:8080:8080 node bash
    ```
 
@@ -43,4 +42,6 @@ Follow these steps to set up the Hangman game on your local machine:
    ```bash
    npm run dev
    ```
-   
+4. open `localhost:8080` and start playing
+
+  
