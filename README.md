@@ -34,7 +34,9 @@ Follow these steps to set up the Hangman game on your local machine:
     ```bash
    sudo docker run -it --rm -v "$(pwd)":/content -p 0.0.0.0:8080:8080 node bash
    ```
-
+   ```bash
+   cd content
+   ```    
    ```bash
    npm i
    ```
