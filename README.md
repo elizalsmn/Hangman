@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Hangman Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Hangman Game! This is a classic word-guessing game built with TypeScript. The game is interactive and can be started with a simple shell script.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **TypeScript:** The game is fully developed in TypeScript, ensuring type safety and better code organization.
+- **Simple Start:** Start the game easily using the provided `start.sh` script.
 
-- Configure the top-level `parserOptions` property like this:
+## Requirements
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Before you can start the game, ensure you have the following installed on your system:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Node.js** (version 14.x or higher)
+- **npm** (Node package manager)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Follow these steps to set up the Hangman game on your local machine:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/elizalsmn/Hangman.git
+   cd Hangman
+   ```
+2. copy the line in start.sh one by one, and you'll have your own container with the game in it. Or you can just copy these lines one by one in the hangman directory
+
+   ```bash
+   sudo docker run -it --rm -v "$(pwd)":/content -p 0.0.0.0:8080:8080 node bash
+   ```
+
+   ```bash
+   npm i
+   ```
+
+   ```bash
+   npm run dev
+   ```
+   
